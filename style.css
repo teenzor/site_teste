@@ -1,0 +1,666 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #00A4FF;
+  animation: colorCycle 8s infinite linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  background-color: #00A4FF;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4.7rem;
+  z-index: 999;
+  animation: colorCycle 8s infinite linear;
+  border-top: 2px solid aliceblue;
+}
+
+.senha-game {
+  margin-top: 5rem;
+  font-size: 17px;
+  color: rgba(240, 248, 255, 0.692);
+  font-weight: 500;
+}
+
+.senha-game span {
+  color: #ffd000;
+  font-size: 16px;
+}
+
+.senha-creditos {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.senha-creditos:hover {
+  text-decoration:none;
+  color: #bbff00;
+  font-size: 21px;
+  transition: 0.9s;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px;
+  color: aliceblue;
+  font-size: 2.7rem;
+}
+
+.div-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2.5rem 0px;
+  max-width: 89%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.div-principal h2 {
+  text-align: center;
+  font-size: 19px;
+  color: aliceblue;
+  border-bottom: 2px solid aliceblue;
+  border-radius: 65px;
+  padding: 0.8rem;
+  margin-bottom: 1.3rem;
+}
+
+.div-principal img {
+  width: 30%;
+  margin: 2.0rem 0rem;
+  border-radius: 10px;
+  border: 1.5px solid aliceblue;
+
+}
+
+.div-principal .btn-infor {
+  background-color: #00A4FF;
+  color: aliceblue;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 65px;
+  background-color: transparent;
+  border-bottom: 2px solid aliceblue;
+  font-size: 16px;
+}
+
+.oculta {
+  display: none;
+}
+
+.oculta.ativo {
+  display: block;
+}
+
+.carousel-inner img {
+  box-shadow: -3px -2px 27px -7px rgba(255, 255, 255, 1);
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+
+h5 {
+  text-align: center;
+  color: aliceblue;
+  padding: 2px 0px;
+  font-size: 16px;
+}
+
+span {
+  color: #8332F1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0rem;
+}
+
+/* CARROSSEL */
+.carousel-container {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 2.2rem;
+  max-width: 30%;
+  padding: 1.7rem 0;
+}
+
+.carousel {
+  display: flex;
+  width: 500%;
+  /* Garante que todas as imagens caibam no carrossel */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  display: flex;
+  width: 400%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-30%);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* REQUISITOS */
+.div-requisitos {
+  border: 2px solid aliceblue;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: -3px -2px 27px -7px rgba(255, 255, 255, 1);
+  width: 32rem;
+  margin: 0 auto;
+}
+
+.btn-baixar {
+  background-color: #00A4FF;
+  color: aliceblue;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 65px;
+  background-color: transparent;
+  border-bottom: 2px solid aliceblue;
+  font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #00A4FF;
+  color: aliceblue;
+  position: fixed;
+  font-size: 0.9rem;
+  width: 100%;
+  height: 2.5rem;
+  z-index: 999;
+  animation: colorCycle 8s infinite linear;
+  padding-top: 0.5rem;
+}
+
+
+@keyframes colorCycle {
+  0% {
+    background-color: navy;
+  }
+
+  /* Azul Marinho */
+  25% {
+    background-color: purple;
+  }
+
+  /* Roxo */
+  100% {
+    background-color: navy;
+  }
+
+  /* Volta ao Azul Marinho */
+}
+
+/* RESPONSIVIDADE MOBILE */
+
+/* TABLETES */
+@media (min-width: 445px) and (max-width: 958px) {
+  body {
+    background-color: black;
+    color: #00A4FF;
+    animation: colorCycle 8s infinite linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  header {
+    background-color: #00A4FF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    z-index: 999;
+    animation: colorCycle 8s infinite linear;
+    border-top: 2px solid aliceblue;
+  }
+
+  .senha-game {
+    margin-top: 5rem;
+
+    font-size: 14px;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 10px;
+    color: aliceblue;
+    font-size: 2.2rem;
+  }
+
+  .div-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2.5rem 0px;
+    max-width: 89%;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .div-principal h2 {
+    text-align: center;
+    font-size: 17px;
+    color: aliceblue;
+    border-bottom: 2px solid aliceblue;
+    border-radius: 65px;
+    padding: 0.8rem 2rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .div-principal img {
+    width: 57%;
+    margin: 0.5rem 0rem;
+    border-radius: 10px;
+    border: 1.5px solid aliceblue;
+
+  }
+
+  .div-principal .btn-infor {
+    background-color: #00A4FF;
+    color: aliceblue;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 65px;
+    background-color: transparent;
+    border-bottom: 2px solid aliceblue;
+    font-size: 16px;
+  }
+
+  .oculta {
+    display: none;
+  }
+
+  .oculta.ativo {
+    display: block;
+  }
+
+  .carousel-inner img {
+    box-shadow: -3px -2px 27px -7px rgba(255, 255, 255, 1);
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 18px;
+  }
+
+  h5 {
+    text-align: center;
+    color: aliceblue;
+    padding: 2px 0px;
+    font-size: 16px;
+  }
+
+  span {
+    color: #8332F1;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0rem;
+  }
+
+  /* CARROSSEL */
+  .carousel-container {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    max-width: 56%;
+    padding: 1.7rem 0;
+  }
+
+  .carousel {
+    display: flex;
+    width: 500%;
+    /* Garante que todas as imagens caibam no carrossel */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    display: flex;
+    width: 400%;
+    box-sizing: border-box;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 50%;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  /* REQUISITOS */
+  .div-requisitos {
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: -3px -2px 27px -7px rgba(255, 255, 255, 1);
+    max-width: 100%;
+    margin: 0 auto;
+    width: 55%;
+  }
+
+  .btn-baixar {
+    background-color: #00A4FF;
+    color: aliceblue;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 65px;
+    background-color: transparent;
+    border-bottom: 2px solid aliceblue;
+    font-size: 16px;
+  }
+
+  /* FOOTER */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #00A4FF;
+    color: aliceblue;
+    position: fixed;
+    font-size: 0.9rem;
+    width: 100%;
+    height: 2.5rem;
+    z-index: 999;
+    animation: colorCycle 8s infinite linear;
+    padding-top: 0.5rem;
+  }
+}
+
+
+
+/* SMARTPHONES */
+@media (max-width: 444px) {
+  body {
+    background-color: black;
+    color: #00A4FF;
+    animation: colorCycle 8s infinite linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  header {
+    background-color: #00A4FF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    z-index: 999;
+    animation: colorCycle 8s infinite linear;
+    border-top: 2px solid aliceblue;
+
+  }
+
+  .senha-game {
+    margin-top: 5rem;
+    font-size: 14px;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 10px;
+    color: aliceblue;
+    font-size: 2.2rem;
+  }
+
+  .div-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2.5rem 0px;
+    max-width: 89%;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .div-principal h2 {
+    text-align: center;
+    font-size: 17px;
+    color: aliceblue;
+    border-bottom: 2px solid aliceblue;
+    border-radius: 65px;
+    padding: 0.8rem 2rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .div-principal img {
+    width: 100%;
+    margin: 0.5rem 0rem;
+    border-radius: 10px;
+    border: 1.5px solid aliceblue;
+
+  }
+
+  .div-principal .btn-infor {
+    background-color: #00A4FF;
+    color: aliceblue;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 65px;
+    background-color: transparent;
+    border-bottom: 2px solid aliceblue;
+    font-size: 16px;
+  }
+
+  .oculta {
+    display: none;
+  }
+
+  .oculta.ativo {
+    display: block;
+  }
+
+  .carousel-inner img {
+    box-shadow: -3px -2px 27px -7px rgba(255, 255, 255, 1);
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 18px;
+  }
+
+  h5 {
+    text-align: center;
+    color: aliceblue;
+    padding: 2px 0px;
+    font-size: 16px;
+  }
+
+  span {
+    color: #8332F1;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0rem;
+  }
+
+  /* CARROSSEL */
+  .carousel-container {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    max-width: 67%;
+    padding: 1.7rem 0;
+  }
+
+  .carousel {
+    display: flex;
+    width: 500%;
+    /* Garante que todas as imagens caibam no carrossel */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    display: flex;
+    width: 400%;
+    box-sizing: border-box;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 50%;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  /* REQUISITOS */
+  .div-requisitos {
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: -3px -2px 27px -7px rgba(255, 255, 255, 1);
+    max-width: 67%;
+    margin: 0 auto;
+  }
+
+  .btn-baixar {
+    background-color: #00A4FF;
+    color: aliceblue;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 65px;
+    background-color: transparent;
+    border-bottom: 2px solid aliceblue;
+    font-size: 16px;
+  }
+
+  /* FOOTER */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #00A4FF;
+    color: aliceblue;
+    position: fixed;
+    font-size: 0.9rem;
+    height: 2.5rem;
+    z-index: 999;
+    animation: colorCycle 8s infinite linear;
+    padding-top: 0.5rem;
+  }
+}
