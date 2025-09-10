@@ -51,6 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", () => showSlide(currentIndex));
 
     // Troca de slide automática a cada 3 segundos
-    setInterval(nextSlide, 3700);
+    setInterval(nextSlide, 4700);
   });
 });
