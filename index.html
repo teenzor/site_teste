@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +7,14 @@
   <meta name="google-site-verification" content="RHeKgVCpRdBvy7MQPPghXhYWx3pvOEc9UA4iv8ziOkM" />
   <meta name="google-site-verification" content="cfkH7BiM-3Fl881TZ5sls3ZxEYGprumWY4zldDS0nwc" />
   <title>NETdownload</title>
-  <!-- Link tradicional para Live Server / edição local -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Script de cache busting automático -->
   <script>
     (function () {
       const version = new Date().getTime();
-
-      // CSS - carregamento imediato antes da renderização
       const link = document.createElement('link');
       link.rel = 'stylesheet';
       link.href = `style.css?v=${version}`;
-      document.head.prepend(link); // prepend garante que CSS seja aplicado primeiro
-
-      // JS - carregamento assíncrono
+      document.head.prepend(link);
       const script = document.createElement('script');
       script.src = `script.js?v=${version}`;
       script.async = true;
