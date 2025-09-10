@@ -9,6 +9,19 @@
   <meta name="google-site-verification" content="cfkH7BiM-3Fl881TZ5sls3ZxEYGprumWY4zldDS0nwc" />
   <title>NETdownload</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      const version = new Date().getTime();
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `style.css?v=${version}`;
+      document.head.prepend(link);
+      const script = document.createElement('script');
+      script.src = `script.js?v=${version}`;
+      script.async = true;
+      document.body.appendChild(script);
+    })();
+  </script>
 </head>
 
 <body>
@@ -341,7 +354,7 @@
   <footer>
     <p>&copy; 2025 NETdownload. Todos os direitos reservados.</p>
   </footer>
-  
+
   <script src="./script.js"></script>
 </body>
 
