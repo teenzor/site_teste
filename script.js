@@ -1,3 +1,18 @@
+// HUSH
+    (function () {
+      const version = new Date().getTime();
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `style.css?v=${version}`;
+      document.head.prepend(link);
+      const script = document.createElement('script');
+      script.src = `script.js?v=${version}`;
+      script.async = true;
+      document.body.appendChild(script);
+    })();
+
+
+
 /*  EVENTOS DE CLICKS */
 document.addEventListener("click", (event) => {
   if (event.target.classList.contains("btn-infor")) {
