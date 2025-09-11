@@ -8,28 +8,26 @@
   <meta name="google-site-verification" content="RHeKgVCpRdBvy7MQPPghXhYWx3pvOEc9UA4iv8ziOkM" />
   <meta name="google-site-verification" content="cfkH7BiM-3Fl881TZ5sls3ZxEYGprumWY4zldDS0nwc" />
   <title>NETdownload</title>
-  <link rel="stylesheet" href="style.css?v=1">
   <!-- Link tradicional para Live Server / edição local -->
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1">
+  <!-- Script de cache busting automático -->
+  <script>
+    (function () {
+      const version = new Date().getTime();
 
-    <!-- Script de cache busting automático -->
-    <script>
-        (function () {
-            const version = new Date().getTime();
+      // CSS - carregamento imediato antes da renderização
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `style.css?v=${version}`;
+      document.head.prepend(link); // prepend garante que CSS seja aplicado primeiro
 
-            // CSS - carregamento imediato antes da renderização
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = `style.css?v=${version}`;
-            document.head.prepend(link); // prepend garante que CSS seja aplicado primeiro
-
-            // JS - carregamento assíncrono
-            const script = document.createElement('script');
-            script.src = `script.js?v=${version}`;
-            script.async = true;
-            document.body.appendChild(script);
-        })();
-    </script>
+      // JS - carregamento assíncrono
+      const script = document.createElement('script');
+      script.src = `script.js?v=${version}`;
+      script.async = true;
+      document.body.appendChild(script);
+    })();
+  </script>
 </head>
 
 <body>
